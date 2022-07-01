@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="module" src="./login.js"></script>
+    <title>Login</title>
+</head>
+<body  class="overflow-hidden">
+    <div class=" h-screen w-full bg-no-repeat bg-cover bg-center absolute flex flex-row justify-center items-center md:justify-around z-0 "  style="background-image: url('assets/watercolor-4116932.png');">
+        <img class="  rounded-full h-0  sm:h-32 sm:opacity-25 lg:h-52 lg:opacity-60 xl:h-96 xl:opacity-90  hover:opacity-100 " src="assets/logol.png" >
+        <div class="  flex flex-col justify-between " style=" width: 410px; height: 400;">
+            <h1 class=" text-5xl text-center mb-5 " style="font-family: 'Pacifico', cursive; color:#203060;">Puerta</h1>
+        
+
+          <div class=" shadow-xl h-96  w-full  flex flex-col justify-evenly items-center p-5 rounded-lg hover:shadow-2xl">
+            <input class=" border-none outline-none ring-0  h-10 w-80 px-3  ring-offset-0 hover:border-0 hover:ring-0" type="email" placeholder="Adresse e-mail ou numéro de tél." id="email_login">
+                <input class="border-0 ring-0 outline-none h-10 w-80 px-3 " type="password" placeholder="Mot de passe" id="password_login">
+            
+                <button class="border-0 ring-0 h-10 w-80 px-2 text-white  text-lg font-thin opacity-95 hover:opacity-100  " style="  background-color :#28396D " id='login'>Se connecter</button>
+        
+            <a class=" text-blue-900 hover:text-black hover:underline" href="#" target="_blank" rel="noopener noreferrer">Mot de passe oublié ?</a>
+            <div class=" flex flex-row justify-between items-center ">
+               <hr class=" h-0.5 w-36 outline-none" style="background-color:#28396D;">
+               <p class=" mx-1" style="color:#28396D;">OU</p>
+               <hr class=" h-0.5 w-36 outline-none" style="background-color:#28396D;">
+            </div>
+           
+        <a href="inscreption.html">
+            <button class="  h-10 w-80   bg-white  rounded-none  flex flex-row justify-center items-center hover:bg-gray-100 " style=" font-family: Roboto-Medium,Roboto; font-weight: 500; color: rgba(0,0,0,.54); "><img  class=" h-6 w-6 mr-2 " src="assets/google.png"> <p class="mr-3">Se Connecter Avec Google</p> </button>
+         </a>
+         
+            <button class=" h-10 w-80 text-md bg-red-500  rounded-none flex flex-row justify-center items-center hover:bg-red-600 text-white" style="font-family: Roboto-Medium,Roboto; font-weight: 500; " onclick="document.getElementById('id01').style.display='block'" style="width:auto;"> Créer nouveau compte</button>
+        
+        </div>
+        <p class=" text-center text-white mt-5">By clicking Agree & Join, you agree to the Puerta <a class=" text-blue-900 hover:text-black hover:underline" href="#">User<br> Agreement</a> , <a class=" text-blue-900 hover:text-black hover:underline" href="#">Privacy Policy</a> , and <a class=" text-blue-900 hover:text-black hover:underline" href="#">Cookie Policy</a>.</p>
+        </div>
+        
+    </div>
+    <div  class=" bg-gray-50 bg-opacity-30 flex flex-col justify-center items-center h-full w-full absolute bg-center z-50" style="display:none;" id="id01">
+        <div class="  shadow-md flex flex-col justify-evenly items-center p-3 bg-white hover:shadow-xl bg-center lg:mx-[550px] lg:my-[50px]" style="height: 600px; width: 500px;  ">
+            <h1 class=" text-2xl" style="font-family: 'Smooch', cursive;">Créer votre compte</h1>
+    
+          <div class=" w-full flex flex-col gap-2">
+            <p class=" w-full" style="font-family: Roboto-Medium,Roboto; font-weight: 500; " >Email</p>
+            <input id="email" class=" h-10 w-full flex flex-row items-center px-3 border outline-none hover:bg-blue-50" type="email" placeholder="email">
+            </div>
+    
+            <div class=" w-full flex flex-col gap-2">
+                <p class=" w-full" style="font-family: Roboto-Medium,Roboto; font-weight: 500; " >Password</p>
+                <input id="password" class=" h-10 w-full flex flex-row items-center px-3 border outline-none hover:bg-blue-50" type="password" placeholder="password" onclick="changed()">
+                </div>
+    
+                <div class=" flex flex-row justify-between w-full gap-4">
+                    <div class=" w-full flex flex-col gap-2 ">
+            <p style="font-family: Roboto-Medium,Roboto; font-weight: 500; ">Name</p>
+            <input id="username" class=" h-10 w-full flex flex-row items-center px-3 border outline-none hover:bg-blue-50" type="text" placeholder="Name">  
+            </div>
+    
+            <div class=" w-full flex flex-col gap-2">
+            <p style="font-family: Roboto-Medium,Roboto; font-weight: 500; ">Phone</p>
+            <input id="phone" class=" h-10 w-full flex flex-row items-center px-3 border outline-none hover:bg-blue-50" type="tel" placeholder="Phone">
+            </div>
+                </div>
+    
+            
+    
+      
+    
+            <div class="w-full flex flex-col gap-2">
+            <p style="font-family: Roboto-Medium,Roboto; font-weight: 500; ">Date de naissance</p>
+            <input id="date" class=" h-10 w-full flex flex-row items-center px-3 border outline-none hover:bg-blue-50" type="date" placeholder="Date de Naissance">
+            </div>
+    
+            <div class="w-full h-16">
+                <p style="font-family: Roboto-Medium,Roboto; font-weight: 500; ">Gender</p>
+                <div class=" flex flex-row justify-around items-center w-full h-10">
+                <div class="flex flex-row justify-center items-center gap-2 w-max h-full  ">
+                    <p class="text-lg font-thin">Homme</p>
+                    <input id="gender"  type="checkbox" >
+                </div>
+                <div class="flex flex-row justify-center items-center gap-2 w-max h-full ">
+                    <p class="text-lg font-thin">Femme</p>
+                    <input id="gender"  type="checkbox" >
+                </div>
+                </div>
+    
+            </div>
+            <button id="signup" class=" h-12 w-full bg-red-500 text-white hover:bg-red-600 text-lg font-thin">S'inscrire</button>
+            
+    
+        </div>
+    </div>
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
+    
+
+</body>
+</html>
